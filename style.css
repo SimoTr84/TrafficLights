@@ -1,0 +1,11 @@
+body {
+  text-align: center;
+}
+
+.row {
+  align-items: center;
+}
+
+.verticalLine {
+  border-left: thick solid #ff0000;
+}

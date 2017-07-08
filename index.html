@@ -4,105 +4,102 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.css"/>
+  <link rel="stylesheet" href="style.css"/>
   <script src="js/jquery.js" charset="utf-8"></script>
   <script src="js/main.js" charset="utf-8"></script>
 
-
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.css">
-
   <title>Traffic Lights</title>
 </head>
-<body>
 
+<body>
   <h1>Traffic Lights</h1>
 
+    <!-- north light -->
   <div class="row">
-    <div class="col s6 m6 l6">
-        <div class="col s6 m6 l6">
-          <div class="col s12 m12 l12 ">
-            <div class="btn-floating btn-large waves-effect waves-light red tl-r">
-              N
-            </div>
-          </div>
-          <div class="col s12 m12 l12 ">
-            <div class="btn-floating btn-large waves-effect waves-light yellow tl-y">
-              N
-            </div>
-          </div>
-          <div class="col s12 m12 l12 ">
-            <div class="btn-floating btn-large waves-effect waves-light green tl-g">
-              N
-            </div>
-          </div>
+    <div class="col s6 offset-s2">
+      <div class="col s12">
+        <div id="north-red" class="btn-floating btn-large white">
+          N
         </div>
-    </div>
-
-    <div class="col s6 m6 l6">
-        <div class="col s6 m6 l6">
-          <div class="col s12 m12 l12 ">
-            <div class="btn-floating btn-large waves-effect waves-light red tl-r">
-              E
-            </div>
-          </div>
-          <div class="col s12 m12 l12 ">
-            <div class="btn-floating btn-large waves-effect waves-light yellow tl-y">
-              E
-            </div>
-          </div>
-          <div class="col s12 m12 l12 ">
-            <div class="btn-floating btn-large waves-effect waves-light green tl-g">
-              E
-            </div>
-          </div>
+      </div>
+      <div class="col s12">
+        <div id="north-yellow" class="btn-floating btn-large white">
+          N
         </div>
+      </div>
+      <div class="col s12">
+        <div id="north-green" class="btn-floating btn-large white">
+          N
+        </div>
+      </div>
     </div>
   </div>
 
-    <br> <br>
 
   <div class="row">
-    <div class="col s6 m6 l6">
-        <div class="col s6 m6 l6">
-          <div class="col s12 m12 l12 ">
-            <div class="btn-floating btn-large waves-effect waves-light red tl-r">
-              S
-            </div>
-          </div>
-          <div class="col s12 m12 l12 ">
-            <div class="btn-floating btn-large waves-effect waves-light yellow tl-y">
-              S
-            </div>
-          </div>
-          <div class="col s12 m12 l12 ">
-            <div class="btn-floating btn-large waves-effect waves-light green tl-g">
-              S
-            </div>
-          </div>
+    <!-- west light -->
+    <div class="col s4">
+      <div class="col s12">
+        <div id="west-red" class="btn-floating btn-large white">
+          E
         </div>
-    </div>
-
-    <div class="col s6 m6 l6">
-        <div class="col s6 m6 l6">
-          <div class="col s12 m12 l12 ">
-            <div class="btn-floating btn-large waves-effect waves-light red tl-r">
-              W
-            </div>
-          </div>
-          <div class="col s12 m12 l12 ">
-            <div class="btn-floating btn-large waves-effect waves-light yellow tl-y">
-              W
-            </div>
-          </div>
-          <div class="col s12 m12 l12 ">
-            <div class="btn-floating btn-large waves-effect waves-light green tl-g">
-              W
-            </div>
-          </div>
+      </div>
+      <div class="col s12">
+        <div id="west-yellow" class="btn-floating btn-large white">
+          E
         </div>
+      </div>
+      <div class="col s12">
+        <div id="west-green" class="btn-floating btn-large white">
+          E
+        </div>
+      </div>
     </div>
-
+    <!-- east light -->
+    <div class="col s3">
+      <div class="col s12">
+        <div id="east-red" class="btn-floating btn-large white">
+          W
+        </div>
+      </div>
+      <div class="col s12">
+        <div id="east-yellow" class="btn-floating btn-large white">
+          W
+        </div>
+      </div>
+      <div class="col s12">
+        <div id="east-green" class="btn-floating btn-large white">
+          W
+        </div>
+      </div>
+    </div>
   </div>
+
+  <!-- south light -->
+  <div class="row">
+    <div class="col s6 offset-s2">
+      <div class="col s12">
+        <div id="south-red" class="btn-floating btn-large white">
+          S
+        </div>
+      </div>
+      <div class="col s12">
+        <div id="south-yellow" class="btn-floating btn-large white">
+          S
+        </div>
+      </div>
+      <div class="col s12">
+        <div id="south-green" class="btn-floating btn-large white">
+          S
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
 
 
 

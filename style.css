@@ -1,11 +1,7 @@
-body {
-  text-align: center;
+:root {
+  background: black;
 }
 
-.row {
-  align-items: center;
-}
-
-.verticalLine {
-  border-left: thick solid #ff0000;
+h1 {
+  color: white;
 }

@@ -11,18 +11,15 @@
 //////////////// Execution ////////////////
 
 // NORTH & SOUTH LIGHTS
-// define the turning red action
-
-// define the timing function that activates the north and south lights action
 const trafficLights = function() {
+  // define the turning red action
   const $northSouthRed = function() {
-    // define the divs on which we will be working on
     $northRed = $("#north-red");
     $southRed = $("#south-red");
-    // define the action of removing and adding classes
     $northRed.removeClass("white").addClass("red");
     $southRed.removeClass("white").addClass("red");
   };
+  // define the second iteration of turning red
   const $northSouthRedTwo = function() {
     $northRed = $("#north-red");
     $southRed = $("#south-red");
@@ -58,6 +55,8 @@ const trafficLights = function() {
   const $eastWestRed = function() {
     $eastRed = $("#east-red");
     $westRed = $("#west-red");
+    $eastYellow = $("#east-yellow");
+    $westYellow = $("#west-yellow");
     $eastRed.removeClass("white").addClass("red");
     $eastYellow.removeClass("yellow").addClass("white");
     $westRed.removeClass("white").addClass("red");
@@ -71,6 +70,7 @@ const trafficLights = function() {
     $eastGreen.removeClass("white").addClass("green");
     $westGreen.removeClass("white").addClass("green");
   };
+  // define the second iteration of turning green
   const $eastWestGreenTwo = function() {
     $eastGreen = $("#east-green");
     $westGreen = $("#west-green");
@@ -93,18 +93,35 @@ const trafficLights = function() {
     $westGreen.removeClass("green").addClass("white");
   };
 
-  $(document).ready($northSouthRed);
-  $(document).ready($eastWestGreen);
-  // northSouthRed && eastWestYellow => .5 minutes
-  window.setTimeout($eastWestYellow, 3000);
-  // northSouthGreen && eastWestRed => 4.5 minutes
-  window.setTimeout($northSouthGreen, 6000);
-  window.setTimeout($eastWestRed, 6000);
-  // northSouthYellow && eastWestRed => .5 minutes
-  window.setTimeout($northSouthYellow, 9000);
-  // northSouthRed && eastWestGreen
-  window.setTimeout($northSouthRedTwo, 12000);
-  window.setTimeout($eastWestGreenTwo, 12000);
+  const lightsAction = function() {
+    $(document).ready($northSouthRed);
+    $(document).ready($eastWestGreen);
+
+    window.setTimeout($eastWestYellow, 3000);
+
+    window.setTimeout($northSouthGreen, 6000);
+    window.setTimeout($eastWestRed, 6000);
+    // northSouthYellow && eastWestRed => .5 minutes
+    window.setTimeout($northSouthYellow, 9000);
+    // northSouthRed && eastWestGreen =>
+    window.setTimeout($northSouthRedTwo, 12000);
+    window.setTimeout($eastWestGreenTwo, 12000);
+  };
+  lightsAction();
 };
 
 trafficLights();
+
+// NEXT STEPS
+// set the timer in real time like so:
+//// north & south red => 5 minutes (300000) && east & west green => 4.5 minutes (270000)
+// ---
+//// east & west yellow => .5 minutes (30000)
+// ---
+//// east & west red => 5 minutes && north & south green => 4.5 minutes
+// --
+//// north & south yellow => .5 minutes
+// --
+//// north & south red => 5 minutes (300000) && east & west green => 4.5 minutes (270000)
+
+// create a loop to iterate the action to last 30 minutes (1800000)
